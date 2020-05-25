@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grey_90"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/grey_90"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_mlarge">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="EVENT NAME"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:drawableEnd="@drawable/ic_rocket"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:padding="15.0dip"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey"
+            android:drawableRight="@drawable/ic_rocket" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:divider="?android:dividerHorizontal"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEMESTER"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Semester"
+                    android:minWidth="80.0dip"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeSpinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:divider="?android:dividerHorizontal"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEPARTMENT"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal" />
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Department"
+                    android:minWidth="80.0dip"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeSpinner" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DESCRIPTION"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0/1000"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/box"
+            android:gravity="start"
+            android:inputType="text"
+            android:maxLength="1000"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="LOCATION"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:drawableEnd="@drawable/ic_location"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:padding="15.0dip"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey"
+            android:drawableRight="@drawable/ic_location" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVENT DATE"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:drawablePadding="10.0dip"
+            android:inputType="textPassword"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:padding="15.0dip"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blue_600"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey"
+            android:drawableRight="@drawable/ic_date_range_black_24dp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVENT CATEGORY"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+
+        <Spinner
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/event_cat"
+            android:minWidth="80.0dip"
+            android:paddingTop="15.0dip"
+            android:paddingEnd="15.0dip"
+            android:paddingBottom="15.0dip"
+            android:spinnerMode="dropdown"
+            android:visibility="visible"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeSpinner"
+            android:paddingRight="15.0dip" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip"
+                android:layout_marginEnd="5.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_rounded_white"
+                android:text="FREE"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginRight="5.0dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip"
+                android:layout_marginStart="5.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_rounded_gredient"
+                android:text="PAID"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="5.0dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMOUNT"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVENT POINTS"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:drawableEnd="@drawable/ic_fire"
+            android:drawablePadding="10.0dip"
+            android:inputType="number"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:padding="15.0dip"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blue_600"
+            android:textStyle="bold"
+            android:theme="@style/EditText.Grey" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="55.0dip"
+            android:background="@drawable/btn_rounded_grey"
+            android:drawableStart="@drawable/ic_attach_file_black_24dp"
+            android:drawablePadding="10.0dip"
+            android:drawableTint="@color/grey_90"
+            android:paddingStart="20.0dip"
+            android:paddingEnd="20.0dip"
+            android:text="Attach Brochure File"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20.0dip"
+            android:text="Brochure.pdf"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:paddingLeft="20.0dip"
+            android:gravity="center_horizontal" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:background="@drawable/btn_rounded_white"
+            android:text="S U B M I T"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

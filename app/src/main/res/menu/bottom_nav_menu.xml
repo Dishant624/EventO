@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@drawable/ic_home" android:id="@+id/nav_home" android:title="Home"/>
+    <item android:icon="@drawable/ic_search" android:id="@+id/nav_add" android:title="Explore"/>
+    <item android:icon="@drawable/ic_notifications" android:id="@+id/nav_partner" android:title="Notification"/>
+    <item android:icon="@drawable/ic_email" android:id="@+id/nav_gallery" android:title="Message"/>
+</menu>

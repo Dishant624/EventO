@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EventO</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="dec">Lorem ipsum dolor sit amet, fermentum auctor ac pellentesque,
+        praesent a turpis, sed habitasse mauris lacus nec proin dictumst, enim rhoncus
+        natoque pariatur turpis vestibulum. Tempus sed molestie bibendum libero tellus ac.
+        Duis turpis tortor phasellus donec dolor, montes eget pellentesque nulla sit ultrices,
+        nunc itaque at ac at justo sed, mauris ipsum in gravida, quam vel faucibus maecenas
+        feugiat laoreet quis. Ornare eros, sed ut urna est lectus, natoque libero id tortor
+        fermentum, vitae fermentum. Proin eros semper dolor dui tempor, lorem vehicula velit id
+        , scelerisque eleifend vestibulum et, justo neque quis ante ligula sapien, suspendisse
+        velit id fermentum id sit donec. Mi sapien amet dui metus mauris, vel sed elementum,
+        volutpat wisi est tempor, magna porttitor ac, ligula dictum hendrerit sed praesent a
+        eget. Purus aliquam, lorem tincidunt diam velit et, convallis vel placerat eros penatibus
+        dis, magna non fusce magna etiam nascetur ligula. Vehicula ipsum pulvinar, nam rhoncus.
+        Nulla quisque posuere platea nunc suscipit ut, arcu dictum fermentum eget proin, erat
+        massa ut nec, nec sit eu fusce, iaculis gravida eget. Eget mauris convallis dui odio,
+        justo ut ut, sed malesuada aliquam ac torquent fusce neque. Lectus augue tempor, et
+        fringilla praesent suspendisse vitae accumsan arcu, justo ipsum ullamcorper cras
+        congue.</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+</resources>
