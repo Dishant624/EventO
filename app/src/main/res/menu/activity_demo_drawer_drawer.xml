@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <item android:icon="@drawable/ic_account_circle" android:id="@+id/nav_profile" android:title="Profile"/>
-    <item android:icon="@drawable/ic_home" android:id="@+id/nav_home" android:title="Event"/>
-    <item android:icon="@drawable/ic_calendar" android:id="@+id/nav_add" android:title="Calender"/>
-    <item android:icon="@drawable/ic_notifications" android:id="@+id/nav_partner" android:title="Notification"/>
-    <group android:id="@+id/g1" android:checkableBehavior="none">
-        <item android:icon="@drawable/ic_help2" android:id="@+id/nav_help" android:title="Help"/>
-        <item android:icon="@drawable/ic_privacy" android:id="@+id/nav_privacy" android:title="Privacy"/>
-        <item android:icon="@drawable/ic_conditions" android:id="@+id/nav_tos" android:title="Terms Of Services"/>
-        <item android:icon="@drawable/ic_logout" android:id="@+id/nav_logout" android:title="Log Out"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_account_circle"
+        android:title="Profile" />
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Event" />
+    <item
+        android:id="@+id/nav_add"
+        android:icon="@drawable/ic_calendar"
+        android:title="Calender" />
+    <item
+        android:id="@+id/nav_partner"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notification" />
+    <group
+        android:id="@+id/g1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help2"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_privacy"
+            android:title="Privacy" />
+        <item
+            android:id="@+id/nav_tos"
+            android:icon="@drawable/ic_conditions"
+            android:title="Terms Of Services" />
+        <item
+            android:id="@+id/nav_them_mode"
+            android:icon="@drawable/ic_them_mode_black_24dp"
+            android:title="Dark Mode"
+            app:actionLayout="@layout/view_switch_them"
+            />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log Out" />
     </group>
 </menu>

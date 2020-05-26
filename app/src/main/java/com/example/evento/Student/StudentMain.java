@@ -5,17 +5,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.evento.Coordinator.Home.EventFragment;
 import com.example.evento.R;
+import com.example.evento.ThemClass;
 import com.example.evento.utils.Tools;
+import com.example.evento.utils.Utils;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener;
 
@@ -29,6 +34,7 @@ public class StudentMain extends AppCompatActivity {
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.main_student);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add((int) R.id.main_content, (Fragment) new EventFragment()).commit();
@@ -39,13 +45,13 @@ public class StudentMain extends AppCompatActivity {
 
     private void initToolbar() {
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
-        this.toolbar.setBackgroundColor(getResources().getColor(R.color.grey_90));
+//        this.toolbar.setBackgroundColor(getResources().getColor(R.color.grey_90));
         setSupportActionBar(this.toolbar);
         this.actionBar = getSupportActionBar();
         this.actionBar.setDisplayHomeAsUpEnabled(true);
         this.actionBar.setHomeButtonEnabled(true);
         this.actionBar.setTitle((CharSequence) "Home");
-        Tools.setSystemBarColor(this, R.color.grey_90);
+        Tools.setSystemBarColor(this, R.color.colorPrimary);
     }
 
     private void initNavigationMenu() {
@@ -65,6 +71,23 @@ public class StudentMain extends AppCompatActivity {
             }
         });
         this.menu_navigation = nav_view.getMenu();
+        MenuItem menuItem =menu_navigation.findItem(R.id.nav_them_mode);
+        View view = menuItem.getActionView();
+        SwitchCompat switchCompat =view.findViewById(R.id.drawer_switch);
+        switchCompat.setChecked(ThemClass.isDarkMode);
+
+        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    ThemClass.isDarkMode = true;
+                    Utils.changeToTheme(StudentMain.this,0);
+                }else{
+                    ThemClass.isDarkMode = false;
+                    Utils.changeToTheme(StudentMain.this,1);
+                }
+            }
+        });
         this.navigation_header = nav_view.getHeaderView(0);
     }
 

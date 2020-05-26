@@ -7,14 +7,34 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    //base them is dark them default
     <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="android:actionModeBackground">@color/blue_grey_600</item>
         <item name="android:dialogTheme">@style/Dialog.Theme</item>
+        <item name="pageBackground">@style/page_background_black</item>
+
+    </style>
+
+    //
+    <style name="WhiteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="colorSurface">@color/colorSurfaceLight</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceLight</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/blue_grey_600</item>
+        <item name="android:dialogTheme">@style/Dialog.Theme</item>
+        <item name="pageBackground">@style/page_background_white</item>
     </style>
 
     <style name="NavigationView">
@@ -25,6 +45,7 @@
         <item name="colorAccent">#fff</item>
         <item name="colorControlNormal">#fff</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -224,5 +245,15 @@
         <item name="colorControlHighlight">@color/blue_600</item>
         <item name="colorControlNormal">@color/grey_40</item>
     </style>
+
+    <style name="page_background_white">
+        <item name="android:background">@drawable/white_gray_gradient_background</item>
+    </style>
+
+    <style name="page_background_black">
+        <item name="android:background">@drawable/black_gray_gradient_background</item>
+    </style>
+
+
 
 </resources>
